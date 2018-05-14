@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include"../Library/s_and_r.c 程序.h"
+#include"../Library/s_and_r.h"
 #include"3.4.2 队列的循环实现 Queue.h"
 #include<Windows.h>
 #include<time.h>

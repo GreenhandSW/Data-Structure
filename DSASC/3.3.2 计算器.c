@@ -1,7 +1,7 @@
 /* this file needs to be compiled with
 	3.3.2 计算器.h
 	3.3.2 栈的数组实现 Stack.h
-	通用.h
+	../Library/通用.h
 	3.3.2 栈的数组实现 test.c
 	3.3.2 栈的数组实现 implementation.c
 */

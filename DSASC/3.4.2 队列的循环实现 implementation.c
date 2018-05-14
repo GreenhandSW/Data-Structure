@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include"通用.h"
+#include"../Library/通用.h"
 #include"3.4.2 队列的循环实现 Queue.h"
 
 /* Place in implementation file */

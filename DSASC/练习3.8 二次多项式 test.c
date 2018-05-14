@@ -7,7 +7,7 @@
 
 #include<stdio.h>
 #include"练习3.7 list.h"
-#include"通用.h"
+#include"../Library/通用.h"
 #include<math.h>
 
 #define MAX 10

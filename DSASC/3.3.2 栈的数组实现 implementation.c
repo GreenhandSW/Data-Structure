@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include"3.3.2 栈的数组实现 Stack.h"
-#include"通用.h"
+#include"../Library/通用.h"
 
 Stack
 CreateStack(int MaxElements)

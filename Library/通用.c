@@ -42,3 +42,10 @@ int Combinatorial_Num(int n, int m)
 
 	return combinatorial;
 }
+
+void Swap(int * a, int * b)
+{
+	int * tmp = a;
+	a=b;
+	b=tmp;
+}
