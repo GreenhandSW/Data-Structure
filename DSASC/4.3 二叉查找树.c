@@ -17,6 +17,11 @@ struct TreeNode
 	SearchTree Right;
 };
 
+struct TREEHEAD
+{
+	SearchTree T;
+	int n;
+};
 // make new node with value x
 SearchTree MakeNewNode(ElementType X, SearchTree T);
 // delete node which has only 1 child.
@@ -92,35 +97,36 @@ Position FindMinOrMax(SearchTree T)
 }
 
 Position
-Insert(ElementType X, SearchTree *T)
+Insert(ElementType X, SearchTree T)
 {
+	TreeNode * T;
 
-	while (*T)
+	while (T)
 	{
-		if (X < (*T)->Element)
-			*T = (*T)->Left;
-		else if (X > (*T)->Element)
-			*T = (*T)->Right;
+		if (X < T->Element)
+			T = T->Left;
+		else if (X > T->Element)
+			T = T->Right;
 		// else X is already in the Tree, we'll raise error and return NULL
 		else
 		{
 			printf("%d is already in the Tree!\n", X);
-			return *T;
+			return T;
 		}
 	}
 
-	*T = (TreeNode *)malloc(sizeof(TreeNode));
-	if (!*T)
+	T = (TreeNode *)malloc(sizeof(TreeNode));
+	if (!T)
 	{
 		FatalError("Out of space!!!");
-		MakeEmpty(*T);
+		MakeEmpty(T);
 		exit(1);
 	}
-	(*T)->Element = X;
-	(*T)->Left = NULL;
-	(*T)->Right = NULL;
+	T->Element = X;
+	T->Left = NULL;
+	T->Right = NULL;
 
-	return *T;
+	return T;
 }
 
 TreeNode * MakeNewNode(ElementType X, SearchTree T)
