@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include"D:\Programming\CPP\程序清单12.9 s_and_r.c 程序.c"
+#include"../../../CPP/程序清单12.9 s_and_r.c 程序.c"
 #include"3.4.2 队列的循环实现 Queue.h"
 #include<Windows.h>
 #include<time.h>

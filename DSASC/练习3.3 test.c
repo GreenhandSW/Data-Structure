@@ -1,12 +1,12 @@
 /* compiles with
 	练习3.1 list.h
 	练习3.1 list.c
-	D:\Programming\CPP\程序清单12.9 s_and_r.c 程序.c
+	../../../CPP/程序清单12.9 s_and_r.c 程序.c
 */
 
 #include<stdio.h>
 #include"练习3.1 list.h"
-#include"D:\Programming\CPP\程序清单12.9 s_and_r.c 程序.c"
+#include"../../../CPP/程序清单12.9 s_and_r.c 程序.c"
 #include<time.h>
 
 #define MAX 10
