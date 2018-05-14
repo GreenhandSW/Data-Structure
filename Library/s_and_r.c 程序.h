@@ -18,5 +18,5 @@ void srand1(unsigned int seed)
 int Random(int min, int max)
 {
 	srand1((unsigned)time(0));
-	return rand()%(max-min)+min;
+	return rand1()%(max-min)+min;
 }
