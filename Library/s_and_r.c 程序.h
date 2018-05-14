@@ -1,5 +1,7 @@
 /* s_and_r.c -- 包含函数rand1()和srand1()的文件 */
 /* 使用ANSI C 的可移植算法 */
+#include<time.h>
+
 static unsigned long int next = 1;			// 种子
 int rand1(void)
 {
@@ -11,4 +13,10 @@ int rand1(void)
 void srand1(unsigned int seed)
 {
 	next = seed;
+}
+
+int Random(int min, int max)
+{
+	srand1((unsigned)time(0));
+	return rand()%(max-min)+min;
 }
