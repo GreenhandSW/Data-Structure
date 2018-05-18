@@ -7,7 +7,18 @@ typedef struct TreeHead TreeHead;
 typedef TreeHead * TreeHeadPtr;
 typedef TreeNode * Position;
 typedef TreeNode * SearchTree;
+struct TreeNode
+{
+	ElementType Element;
+	SearchTree Left;
+	SearchTree Right;
+};
 
+struct TreeHead
+{
+	SearchTree T;
+	int n;
+};
 TreeHeadPtr MakeTreeEmpty(TreeHeadPtr THP);		// doesn't free the space of TreeHead
 Position Find(ElementType X, TreeHeadPtr THP);
 Position FindMin(TreeHeadPtr THP);

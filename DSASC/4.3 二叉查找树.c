@@ -14,6 +14,19 @@
 #define EQUAL 0
 #define BIGGER 1
 
+struct TreeNode
+{
+	ElementType Element;
+	SearchTree Left;
+	SearchTree Right;
+};
+
+struct TreeHead
+{
+	SearchTree T;
+	int n;
+};
+
 // make new node with value x
 SearchTree MakeNewNode(ElementType X, SearchTree T);
 // delete node which has only 1 child.
