@@ -1,4 +1,12 @@
 #pragma once
+/* Compiles with
+	4.3 二叉查找树.h
+	4.3 二叉查找树.c
+	../Library/s_and_r.h
+	../Library/s_and_r.c
+	../Library/通用.h
+	../Library/通用.c
+	*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
