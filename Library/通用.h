@@ -1,5 +1,9 @@
 #include<stdio.h>
 
+#define BIGGER 1
+#define EQUAL 0
+#define SMALLER -1
+
 void FatalError(char * information);
 void Error(char * information);
 // seems "Factorial" will be useless if i assign "n" to this "m"
