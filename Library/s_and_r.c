@@ -14,3 +14,9 @@ void srand1(unsigned int seed)
 {
 	next = seed;
 }
+
+
+int Random(int min, int max)
+{
+	return rand1() % (max - min) + min;
+}

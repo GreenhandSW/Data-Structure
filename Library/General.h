@@ -3,6 +3,8 @@
 #define BIGGER 1
 #define EQUAL 0
 #define SMALLER -1
+#define LEFT 0
+#define RIGHT 1
 
 void FatalError(char * information);
 void Error(char * information);
