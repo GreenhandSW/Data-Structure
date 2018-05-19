@@ -5,6 +5,7 @@
 #include"../Library/s_and_r.h"
 
 /*	printf("%d is already in the tree!\n", X);
+	printf("%d not found!\n", X);
 	return X > Y ? X : Y;
 	These lines has to be modified is ElementType changed
 */
@@ -149,7 +150,7 @@ Delete(ElementType X, AvlTree T)
 	Position TmpCell;
 
 	if (T == NULL)
-		Error("Element not found\n");
+		printf("%d not found!\n", X);
 	else if (Compare(X, T->Element) == SMALLER)	// Go left
 		T->Left = Delete(X, T->Left);
 	else if (Compare(X, T->Element) == BIGGER)	// Go right
