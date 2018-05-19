@@ -4,6 +4,8 @@
 #include"../Library/General.h"
 #include"../Library/s_and_r.h"
 
+/* The Find process is not finished */
+
 /*	printf("%d is already in the tree!\n", X);
 	printf("%d not found!\n", X);
 	return X > Y ? X : Y;
