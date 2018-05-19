@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include"Á·Ï°3.1 list.h"
-#include"../Library/s_and_r.c ³ÌÐò.h"
+#include"../Library/s_and_r.h"
 #include<time.h>
 #define MAX 100
 

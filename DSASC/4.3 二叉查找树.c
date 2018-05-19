@@ -6,13 +6,10 @@
 #include<stdbool.h>
 #include<stdlib.h>
 #include"4.3 二叉查找树.h"
-#include"../Library/通用.h"
+#include"../Library/General.h"
 #include"../Library/s_and_r.h"
 #define LEFT 0
 #define RIGHT 1
-#define SMALLER -1
-#define EQUAL 0
-#define BIGGER 1
 
 struct TreeNode
 {

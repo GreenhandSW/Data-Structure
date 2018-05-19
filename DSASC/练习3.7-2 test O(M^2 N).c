@@ -1,11 +1,12 @@
-/* compiles with
-	Á·Ï°3.1 list.h
-	Á·Ï°3.1 list.c
-	../Library/s_and_r.c ³ÌÐò.h
+ï»¿/* compiles with
+	ï¿½ï¿½Ï°3.1 list.h
+	ï¿½ï¿½Ï°3.1 list.c
+	../Library/s_and_r.h
+	../Library/s_and_r.c
 */
 
 #include<stdio.h>
-#include"Á·Ï°3.6 list.h"
+#include"ï¿½ï¿½Ï°3.6 list.h"
 
 #define MAX 10
 

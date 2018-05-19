@@ -4,15 +4,15 @@
 	4.3 二叉查找树.c
 	../Library/s_and_r.h
 	../Library/s_and_r.c
-	../Library/通用.h
-	../Library/通用.c
+	../Library/General.h
+	../Library/General.c
 	*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
 #include"4.3 二叉查找树.h"
 #include"../Library/s_and_r.h"
-#include"../Library/通用.h"
+#include"../Library/General.h"
 #define MAX 20
 
 void PrintElement(ElementType X);

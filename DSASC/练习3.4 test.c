@@ -1,7 +1,8 @@
 /* compiles with
 	Á·Ï°3.1 list.h
 	Á·Ï°3.1 list.c
-	../Library/s_and_r.c ³ÌÐò.h
+	../Library/s_and_r.h
+	../Library/s_and_r.c
 */
 
 #include<stdio.h>
