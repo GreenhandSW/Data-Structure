@@ -10,10 +10,10 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-#include"4.3 二叉查找树.h"
+#include"Practice 4.28 二叉查找树.h"
 #include"../Library/s_and_r.h"
 #include"../Library/General.h"
-#define MAX 20
+#define MAX 10
 
 void PrintElement(ElementType X);
 
@@ -23,10 +23,11 @@ int main(void)
 	int list[MAX];
 	int random;
 	int count = MAX-1;
+	Count count_nodes;
 
 	THP = MakeTreeEmpty(NULL);
 	for (int i = 0; i < MAX; i++)
-	{
+	{	
 		srand1((unsigned)time(0)*(i+1));
 		list[i] = Random(0, 100);
 		printf("%d ", list[i]);
@@ -43,6 +44,7 @@ int main(void)
 	while ( size> 0)
 	{
 		random = Random(0, count+1);
+		Calc(THP, &count_nodes);
 		Delete(list[random], THP);
 		int deleted = list[random];
 

@@ -5,7 +5,7 @@
 #include<stdio.h>
 #include<stdbool.h>
 #include<stdlib.h>
-#include"4.3 二叉查找树.h"
+#include"Practice 4.28 二叉查找树.h"
 #include"../Library/General.h"
 #include"../Library/s_and_r.h"
 
@@ -143,6 +143,21 @@ int GetSearchTreeSize(TreeHeadPtr THP)
 		return THP->n;
 
 	return 0;
+}
+
+void Calc(TreeHeadPtr THP, Count * count)
+{
+	count->fullnodes = 0;
+	count->leaves = 0;
+	count->nodes = 0;
+	count->non_leaves = 0;
+
+	subCalc(THP->T, count);
+
+	printf("%d nodes\n", count->nodes);
+	printf("%d fullnodes\n", count->fullnodes);
+	printf("%d non-leaves\n", count->non_leaves);
+	printf("%d leaves\n", count->leaves);
 }
 
 TreeNode * MakeNewNode(ElementType X, SearchTree T)
@@ -319,6 +334,36 @@ void subPostOrder(SearchTree T, void(*pfun)(ElementType X))
 ElementType Retrieve(Position P)
 {
 	return P->Element;
+}
+
+void subCalc(SearchTree T, Count * count)
+{
+	if (T)
+	{
+		switch ((!!(T->Left)) + (!!(T->Right)) * 2)
+		{
+			// has two children
+			case 3:
+				count->fullnodes++;
+				count->non_leaves++;
+				count->nodes++;
+				break;
+			// has only right child
+			case 2:
+			// has only left child
+			case 1:
+				count->non_leaves++;
+				count->nodes++;
+				break;
+			// has no children
+			case 0:
+				count->leaves++;
+				count->nodes++;
+					break;
+		}
+		subCalc(T->Left, count);
+		subCalc(T->Right, count);
+	}
 }
 
 TreeHeadPtr MakeTreeEmpty(TreeHeadPtr THP)
