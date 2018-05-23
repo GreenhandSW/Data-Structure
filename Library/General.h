@@ -12,3 +12,5 @@ void Error(char * information);
 int Reverse_Factorial(int n, int m);
 int Combinatorial_Num(int n, int m);
 void Swap(int * a, int * b);
+// find the smallest prime bigger than n
+int NextPrime(int n);

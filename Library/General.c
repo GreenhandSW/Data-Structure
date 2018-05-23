@@ -49,3 +49,26 @@ void Swap(int * a, int * b)
 	*a=*b;
 	*b=tmp;
 }
+
+int NextPrime(int n)
+{
+	int prime = n - 1;	// make prime smaller than n
+	int x = n + 1;		// search from next number of n
+	int abs_value;		// store absolute value of x
+	while (prime < n)
+	{
+		abs_value = abs(x);
+		int i;
+		for (i = 2; i*i < abs_value; i++)
+			if (x%i == 0)	// x can be fully divided by i, so it's not a prime
+				break;
+		// i*i>abs_value means that |x| can't be divided by i that's smaller than |x|^0.5
+		// and abs_value>1 means if |x| is 0 or 1, it's not a prime
+		if (i*i > abs_value && abs_value > 1)
+			prime = x;
+		else
+			x++;		// try next value
+	}
+
+	return prime;
+}
