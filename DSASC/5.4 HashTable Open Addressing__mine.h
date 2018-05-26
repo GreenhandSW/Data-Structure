@@ -1,4 +1,4 @@
-#ifndef _HashTable_Separate_Chaining_H
+#ifndef _HashTable_Open_Addressing__mine_H
 #include<string.h>
 #define STRLEN 5
 

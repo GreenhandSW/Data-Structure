@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<stdbool.h>
 #include"../Library/General.h"
-#include"5.4 HashTable Open Addressing.h"
+#include"5.4 HashTable Open Addressing__mine.h"
 
 /*	printf("%s is not in the table!\n", Key);
 	printf("%s is already in the Table!\n", Key);

@@ -2,7 +2,7 @@
 #include<time.h>
 #include"../Library/s_and_r.h"
 #include"../Library/General.h"
-#include"5.4 HashTable Open Addressing.h"
+#include"5.4 HashTable Open Addressing__mine.h"
 
 #define MAXLENGTH 20
 
