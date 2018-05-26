@@ -100,7 +100,7 @@ Position Find(ElementType Key, HashTable H)
 	}
 	if (index == H->TableSize)
 	{
-		//printf("%s is not in the table!\n", Key);
+		printf("%s is not in the table!\n", Key);
 		return NULL;
 	}
 	else

@@ -4,7 +4,7 @@
 #include"../Library/General.h"
 #include"5.4 HashTable Open Addressing.h"
 
-#define MAXLENGTH 12
+#define MAXLENGTH 20
 
 void PrintElement(ElementType X);
 
@@ -27,8 +27,8 @@ int main(void)
 	// Insert elements of array to HashTable
 	for (int i = 0; i < MAXLENGTH; i++)
 	{
-		Insert(list[MAXLENGTH - i - 1], H);
 		puts("----------------");
+		Insert(list[MAXLENGTH - i - 1], H);
 		printf("After Insert %s: ", list[MAXLENGTH - i - 1]);
 		Traverse(H, PrintElement);
 		puts("");
@@ -37,16 +37,16 @@ int main(void)
 	int i = 0;
 	while (GetCurrentCount(H) > 0)
 	{
-		ElementType found = Retrieve(Find(list[i], H));
+		ElementType found;
+
+		puts("----------------");
+		found = Retrieve(Find(list[i], H));
 		if (found)
-		{
 			Delete(found, H);
-			puts("----------------");
-			printf("After Delete %s: ", found);
-			Traverse(H, PrintElement);
-			puts("");
-		}
-			i++;
+		printf("After Delete %s: ", list[i]);
+		Traverse(H, PrintElement);
+		puts("");
+		i++;
 	}
 
 	H = MakeEmpty(H);
