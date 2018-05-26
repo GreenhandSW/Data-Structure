@@ -27,22 +27,18 @@ int main(void)
 	// Insert elements of array to HashTable
 	for (int i = 0; i < MAXLENGTH; i++)
 	{
-		puts("----------------");
+		printf("------------%*c\n", STRLEN, ' ');
 		Insert(list[MAXLENGTH - i - 1], H);
 		printf("After Insert %s: ", list[MAXLENGTH - i - 1]);
 		Traverse(H, PrintElement);
 		puts("");
 	}
-
+	puts("\n");
 	int i = 0;
 	while (GetCurrentCount(H) > 0)
 	{
-		ElementType found;
-
-		puts("----------------");
-		found = Retrieve(Find(list[i], H));
-		if (found)
-			Delete(found, H);
+		printf("------------%*c\n", STRLEN, ' ');
+		Delete(list[i], H);
 		printf("After Delete %s: ", list[i]);
 		Traverse(H, PrintElement);
 		puts("");

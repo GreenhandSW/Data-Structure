@@ -4,6 +4,14 @@
 #include"../Library/General.h"
 #include"5.4 HashTable Open Addressing.h"
 
+/*	printf("%s is not in the table!\n", Key);
+	printf("%s is already in the Table!\n", Key);
+	pfun(Retrieve(&(H->Lists[i])));	// This is redundant, but as for any other
+	Hash
+	Compare
+	have to be modified if ElementType is changed.
+*/
+
 #define MinTableSize 7
 typedef unsigned int Index;
 
@@ -84,10 +92,12 @@ void DestroyTable(HashTable H)
 
 Position Find(ElementType Key, HashTable H)
 {
-	int start = Hash(Key, H->TableSize);
+	int start;
 	int index;
 
-
+	if (!Key)
+		return NULL;
+	start = Hash(Key, H->TableSize);
 	for (index = 0; index < H->TableSize; index++)
 	{
 		if (Compare(H->Lists[start], Key) == EQUAL)
@@ -100,7 +110,7 @@ Position Find(ElementType Key, HashTable H)
 	}
 	if (index == H->TableSize)
 	{
-		printf("%s is not in the table!\n", Key);
+		//printf("%s is not in the table!\n", Key);
 		return NULL;
 	}
 	else
@@ -110,6 +120,7 @@ Position Find(ElementType Key, HashTable H)
 void Delete(ElementType Key, HashTable H)
 {
 	Position P = Find(Key, H);
+
 	if (P)
 	{
 		*P = NULL;
@@ -125,9 +136,7 @@ void Insert(ElementType Key, HashTable H)
 
 	// HashTable is full
 	if (H->CurrentNum == H->TableSize)
-	{
 		puts("Insertion failed, HashTable full!!!");
-	}
 	else if (Find(Key, H) != NULL)
 		printf("%s is already in the Table!\n", Key);
 	else	// find a vacancy to put Key into.
@@ -158,7 +167,9 @@ ElementType Retrieve(Position P)
 void Traverse(HashTable H, void(*pfun)(ElementType X))
 {
 	for (int i = 0; i < H->TableSize; i++)
-		pfun(Retrieve(&(H->Lists[i])));
+		pfun(Retrieve(&(H->Lists[i])));	// This is redundant, but as for any other
+										// ElementType may need "Retrieve" it's value
+										// from its node, so it's retained.
 }
 
 int GetSize(HashTable H)
