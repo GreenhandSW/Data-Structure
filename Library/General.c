@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<math.h>
+#include "General.h"
 
 void FatalError(char * information)
 {
@@ -95,4 +96,20 @@ int PrevPrime(int n)
 	}
 
 	return prime;
+}
+
+int Log2Ceiling(int n)
+{
+	int value;
+
+	if (n <= 0)
+		value = -2147483647;
+	else
+	{
+		value = (int)log2(n);
+		if (1 << ((int)value) < n)
+			value++;
+	}
+
+	return value;
 }

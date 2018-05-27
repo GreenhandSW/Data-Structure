@@ -16,3 +16,6 @@ void Swap(int * a, int * b);
 int NextPrime(int n);
 // find the biggest prime smaller than n
 int PrevPrime(int n);
+// gets log2(n), and rounds it to ceiling. for example,
+// Log2Ceiling(8)=3, Log2Ceiling(9)=4
+int Log2Ceiling(int n);
