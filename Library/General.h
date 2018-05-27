@@ -14,3 +14,5 @@ int Combinatorial_Num(int n, int m);
 void Swap(int * a, int * b);
 // find the smallest prime bigger than n
 int NextPrime(int n);
+// find the biggest prime smaller than n
+int PrevPrime(int n);
