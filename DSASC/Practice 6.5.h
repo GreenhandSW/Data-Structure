@@ -29,6 +29,7 @@ ElementType Delete(Position P, PriorityQueue Q);
 void BuildHeap(PriorityQueue Q);
 int GetCurSize(PriorityQueue Q);
 ElementType GetValue(Position P, PriorityQueue Q);
+void FindSmaller(ElementType X, PriorityQueue Q, void (*pfun)(ElementType X));
 
 void PrintElement(ElementType X);
 

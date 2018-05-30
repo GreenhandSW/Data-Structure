@@ -22,6 +22,7 @@ int Compare(ElementType a, ElementType b)
 	else
 		return BIGGER;
 }
+void subFindSmaller(ElementType X, PriorityQueue Q, Position P, void(*pfun)(ElementType X));
 
 PriorityQueue Initialize(ElementType list[], int Length)
 {
@@ -221,8 +222,26 @@ ElementType GetValue(Position P, PriorityQueue Q)
 		return Q->Elements[0];
 }
 
+void FindSmaller(ElementType X, PriorityQueue Q, void(*pfun)(ElementType X))
+{
+	subFindSmaller(X, Q, 1, pfun);
+}
+
 void PrintElement(ElementType X)
 {
 	//if (X >= MinData && X < MaxData)
 		printf("%5d", X);
+}
+
+void subFindSmaller(ElementType X, PriorityQueue Q, Position P, void(*pfun)(ElementType X))
+{
+	if (0 < P && P <= Q->Size)
+	{
+		if (Compare(Q->Elements[P], X) == SMALLER)
+		{
+			pfun(Q->Elements[P]);
+			subFindSmaller(X, Q, P * 2, pfun);
+			subFindSmaller(X, Q, P * 2 + 1, pfun);
+		}
+	}
 }

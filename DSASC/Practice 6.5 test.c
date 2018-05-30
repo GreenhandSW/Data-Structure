@@ -48,6 +48,11 @@ int main(void)
 	Traverse(Q, PrintElement);
 	puts("");
 
+	// Find elements smaller than X
+	printf("Smaller than %d:\n", GetValue(12, Q));
+	FindSmaller(GetValue(12, Q), Q, PrintElement);
+	puts("");
+
 	Q = MakeEmpty(Q);
 	return 0;
 }
