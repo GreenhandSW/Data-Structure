@@ -18,11 +18,15 @@ int main(void)
 	printf("Initial List:\n");
 	PrintList(list, MAXLENGTH);
 
-	// Insertion Sort
-	Shellsort(list, MAXLENGTH);
-	printf("After Shellsort:\n");
-	PrintList(list, MAXLENGTH);
+	//// Insertion Sort
+	//Shellsort(list, MAXLENGTH);
+	//printf("After Shellsort:\n");
+	//PrintList(list, MAXLENGTH);
 
+	// Insertion Sort
+	ShellsortHibbard(list, MAXLENGTH);
+	printf("After Shellsort with Hibbard increment:\n");
+	PrintList(list, MAXLENGTH);
 	return 0;
 }
 
